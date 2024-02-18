@@ -42,7 +42,9 @@ import 'package:fusion/screens/Programme_Curriculum/Programme/programme_home_pag
 import 'package:fusion/screens/Programme_Curriculum/Programme_Info/programme_info.dart';
 import 'package:fusion/screens/Programme_Curriculum/programme_curriculum_home.dart';
 import 'package:fusion/screens/RSPC/closure_report.dart';
+import 'package:fusion/screens/RSPC/request_requirement.dart';
 import 'package:fusion/screens/RSPC/rspc_home.dart';
+import 'package:fusion/screens/RSPC/view_inventory.dart';
 import 'package:fusion/screens/landing_page.dart';
 import 'package:fusion/screens/Healthcenter/healthcentermodule.dart';
 import 'package:fusion/screens/Healthcenter/feedback.dart';
@@ -94,7 +96,8 @@ class MyApp extends StatelessWidget {
           '/rspc_home_page' :(context) => RspcHome(),
           
           '/closure_report' :(context) => Closure_report(),
-
+          '/view_inventory' :(context)=> View_Inventory(),
+          'request_requirement' :(context)=> Request_Requirement(),
 
 
           '/academic_home_page': (context) => AcademicHomePage(

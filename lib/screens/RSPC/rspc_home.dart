@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fusion/Components/appBar.dart';
 import 'package:fusion/screens/RSPC/closure_report.dart';
+import 'package:fusion/screens/RSPC/view_inventory.dart';
+import 'package:fusion/screens/RSPC/request_requirement.dart';
 import 'package:fusion/screens/RSPC/view_project.dart';
 
 class RspcHome extends StatelessWidget {
@@ -146,7 +148,9 @@ class RspcHome extends StatelessWidget {
                    height: 50,
                   child: ElevatedButton(
                     
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => Request_Requirement()));
+                      },
                       child: Text("Request Requirement"),
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -162,8 +166,10 @@ class RspcHome extends StatelessWidget {
                    height: 50,
                   child: ElevatedButton(
                     
-                      onPressed: () {},
-                      child: Text("Inventory"),
+                       onPressed: () {
+                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => View_Inventory()));
+                      },
+                      child: Text("View Inventory"),
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0))
