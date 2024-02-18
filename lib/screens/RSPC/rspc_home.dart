@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fusion/Components/appBar.dart';
+import 'package:fusion/screens/RSPC/closure_report.dart';
+import 'package:fusion/screens/RSPC/view_project.dart';
 
 class RspcHome extends StatelessWidget {
   const RspcHome({Key? key}) : super(key: key);
@@ -15,48 +18,13 @@ class RspcHome extends StatelessWidget {
   //   //   ]),
   //   // );
 
-
   // }
 
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: Icon(Icons.menu),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-              );
-            },
-          ),
-          title: Text(
-            'Fusion',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20.0,
-            ),
-          ),
-          centerTitle: true,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                // Add your search functionality here
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.notifications),
-              onPressed: () {
-                // Add your notification functionality here
-              },
-            ),
-          ],
-        ),
+        appBar: DefaultAppBar().buildAppBar(),
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
@@ -83,26 +51,124 @@ class RspcHome extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: ListView(
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                height: 35, 
+              ),
               Image.asset(
-                'assets/images/your_image.jpg',
-                width: 150.0,
-                height: 150.0,
+                 
+                'assets/mypic.jpg',
+                width: 200.0,
+                height: 200.0,
               ),
               SizedBox(height: 20.0),
-              Text(
-                'Mr. Atul Gupta',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
+              Center(
+                child: Text(
+                  'Dr. Atul Gupta',
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    
+                  ),
                 ),
               ),
-              Text(
-                'CSE',
-                style: TextStyle(
-                  fontSize: 20.0,
+              Center(
+                child: Text(
+                  'CSE',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+              SizedBox(
+                 height:  20,
+
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.all(8.0),
+                child: SizedBox(
+                   width: 10,
+                   height: 50,
+                  child: ElevatedButton(
+                    
+                      onPressed: () {
+                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => Closure_report()));
+                      },
+                      child: Text("Closure report"),
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0))
+                              )
+                          ),
+                          
+                ),
+              ),
+               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                   width: 10,
+                   height: 50,
+                  child: ElevatedButton(
+                    
+                      onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => View_project()));
+                      },
+                      child: Text("View Project"),
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0))
+                              )
+                          ),
+                ),
+              ),
+               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                   width: 10,
+                   height: 50,
+                  child: ElevatedButton(
+                    
+                      onPressed: () {},
+                      child: Text("Request Staff"),
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0))
+                              )
+                          ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                   width: 10,
+                   height: 50,
+                  child: ElevatedButton(
+                    
+                      onPressed: () {},
+                      child: Text("Request Requirement"),
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0))
+                              )
+                          ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                   width: 10,
+                   height: 50,
+                  child: ElevatedButton(
+                    
+                      onPressed: () {},
+                      child: Text("Inventory"),
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0))
+                              )
+                          ),
                 ),
               ),
             ],

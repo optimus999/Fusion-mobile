@@ -16,6 +16,8 @@ import 'package:fusion/screens/Academic/academic_home_page.dart';
 // import 'package:fusion/screens/RSPC/page_1.dart';
 
 
+
+
 import 'package:fusion/screens/Academic/Current_Semester/current_semester_home_page.dart';
 import 'package:fusion/screens/Academic/Registration/registration_home_page.dart';
 import 'package:fusion/screens/Academic/Thesis/thesis_home_page.dart';
@@ -39,6 +41,7 @@ import 'package:fusion/screens/Programme_Curriculum/Discipline/discipline.dart';
 import 'package:fusion/screens/Programme_Curriculum/Programme/programme_home_page.dart';
 import 'package:fusion/screens/Programme_Curriculum/Programme_Info/programme_info.dart';
 import 'package:fusion/screens/Programme_Curriculum/programme_curriculum_home.dart';
+import 'package:fusion/screens/RSPC/closure_report.dart';
 import 'package:fusion/screens/RSPC/rspc_home.dart';
 import 'package:fusion/screens/landing_page.dart';
 import 'package:fusion/screens/Healthcenter/healthcentermodule.dart';
@@ -89,6 +92,9 @@ class MyApp extends StatelessWidget {
           '/dashboard': (context) => Dashboard(),
 
           '/rspc_home_page' :(context) => RspcHome(),
+          
+          '/closure_report' :(context) => Closure_report(),
+
 
 
           '/academic_home_page': (context) => AcademicHomePage(
